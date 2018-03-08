@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TranslucentTheme" parent="AppTheme">
+
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+</resources>

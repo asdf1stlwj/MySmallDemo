@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="font_blackD2">#353535</color>
+    <color name="font_blackD1">#565656</color>
+    <color name="font_grayD2">#999999</color>
+    <color name="font_grayD1">#bbbbbb</color>
+    <color name="font_grayD3">#BFC2D2</color>
+
+    <color name="lr_black3">#E8E8F5</color>
+    <!--<color name="bg1">#FAFDFF</color>-->
+    <color name="bg1">#EAF6FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="color_pink">#FF6CAA</color>
+    <color name="color_orange">#FF8F6D</color>
+    <color name="color_blue">#2FBCF0</color>
+    <color name="color_light_blue">#47D4E6</color>
+    <color name="color_purple">#5C5BD6</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_yellow">#F89B35</color>
+    <color name="color_shadow">#5f3FCCE9</color>
+    <color name="theme_color">#445BC5</color>
+    <color name="font_themeD1">#4C5786</color>
+    <color name="font_blackA1">#3B3B3B</color>
+    <color name="font_blackE1">#7D85A8</color>
+
+
+</resources>

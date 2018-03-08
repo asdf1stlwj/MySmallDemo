@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--手机字体尺寸-->
+    <dimen name="fontSize_logo">40dp</dimen><!--对应字号40-->
+    <dimen name="fontSize_XXL">22dp</dimen><!--对应字号30-->
+   <!-- <dimen name="fontSize_XL">20dp</dimen>
+    <dimen name="fontSize_L">20dp</dimen>
+    <dimen name="fontSize_M">16dp</dimen>
+    <dimen name="fontSize_MS">16dp</dimen>
+    <dimen name="fontSize_S">15dp</dimen>
+    <dimen name="fontSize_XS">14dp</dimen>
+    <dimen name="fontSize_XXS">13dp</dimen>
+    <dimen name="fontSize_TAB">10dp</dimen>-->
+    <dimen name="fontSize_XL">20dp</dimen>
+    <dimen name="fontSize_L">20dp</dimen>
+    <dimen name="fontSize_M">18dp</dimen>
+    <dimen name="fontSize_MS">17dp</dimen>
+    <dimen name="fontSize_S">16dp</dimen>
+    <dimen name="fontSize_XS">15dp</dimen>
+    <dimen name="fontSize_XXS">13dp</dimen>
+    <dimen name="fontSize_TAB">10dp</dimen>
+
+</resources>

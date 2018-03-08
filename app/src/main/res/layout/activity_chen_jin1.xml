@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chen_jin1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg1"
+    android:orientation="vertical"
+    tools:context="com.asdf1st.mydemo.UI.Immensive.ChenJinActivity1">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="沉浸式标题栏"
+        android:background="#ffffff"
+        />
+</LinearLayout>

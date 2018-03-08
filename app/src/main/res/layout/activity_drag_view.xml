@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.asdf1st.mydemo.UI.Drag.DragLayout
+
+        android:id="@+id/ll_drag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        tools:context="com.asdf1st.mydemo.UI.Drag.DragViewActivity">
+        <LinearLayout
+            android:id="@+id/ll_one"
+            android:layout_marginTop="@dimen/length_XS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:contentDescription="haveDrag"
+            android:background="@drawable/bg_black3_corners"
+            >
+            <LinearLayout
+                android:layout_width="@dimen/pro_item_width"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/pro_item_height"
+                android:orientation="vertical"
+                android:background="@drawable/complete"
+                android:paddingLeft="12dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_img_wh"
+                    android:layout_height="@dimen/toolbar_img_wh"
+                    android:src="@drawable/car_white"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="等待"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fontSize_S"
+                    />
+
+            </LinearLayout>
+
+            <com.asdf1st.mydemo.Utils.NoScrollGridView
+                android:id="@+id/gv_text1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:verticalSpacing="5dp"
+                android:horizontalSpacing="10dp"
+                android:scrollbars="none"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                ></com.asdf1st.mydemo.Utils.NoScrollGridView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/comm_page_pad"
+            android:orientation="horizontal"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:contentDescription="haveDrag"
+            android:background="@drawable/bg_black3_corners"
+            >
+            <LinearLayout
+                android:layout_width="@dimen/pro_item_width"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/pro_item_height"
+                android:orientation="vertical"
+                android:background="@drawable/check"
+                android:paddingLeft="12dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_img_wh"
+                    android:layout_height="@dimen/toolbar_img_wh"
+                    android:src="@drawable/car_white"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检查"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fontSize_S"
+                    />
+
+            </LinearLayout>
+
+            <!--<TextView
+                android:layout_width="@dimen/pro_item_width"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/pro_item_height"
+                android:background="@drawable/check"
+                android:text="检查"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fontSize_S"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                ></TextView>-->
+            <com.asdf1st.mydemo.Utils.NoScrollGridView
+                android:id="@+id/gv_text2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:verticalSpacing="5dp"
+                android:horizontalSpacing="10dp"
+                android:scrollbars="none"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                ></com.asdf1st.mydemo.Utils.NoScrollGridView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/comm_page_pad"
+            android:orientation="horizontal"
+            android:clipChildren="false"
+            android:contentDescription="haveDrag"
+            android:background="@drawable/bg_black3_corners"
+            >
+
+            <LinearLayout
+                android:layout_width="@dimen/pro_item_width"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/pro_item_height"
+                android:orientation="vertical"
+                android:background="@drawable/work"
+                android:paddingLeft="12dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_img_wh"
+                    android:layout_height="@dimen/toolbar_img_wh"
+                    android:src="@drawable/car_white"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工作"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fontSize_S"
+                    />
+
+            </LinearLayout>
+            <!-- <TextView
+                 android:layout_width="@dimen/pro_item_width"
+                 android:layout_height="match_parent"
+                 android:minHeight="@dimen/pro_item_height"
+                 android:background="@drawable/work"
+                 android:text="工作"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/fontSize_S"
+                 android:gravity="center_vertical"
+                 android:paddingLeft="12dp"
+                 ></TextView>-->
+            <com.asdf1st.mydemo.Utils.NoScrollGridView
+                android:id="@+id/gv_text3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:verticalSpacing="5dp"
+                android:horizontalSpacing="10dp"
+                android:scrollbars="none"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                ></com.asdf1st.mydemo.Utils.NoScrollGridView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/comm_page_pad"
+            android:orientation="horizontal"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:contentDescription="haveDrag"
+            android:background="@drawable/bg_black3_corners">
+            <LinearLayout
+                android:layout_width="@dimen/pro_item_width"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/pro_item_height"
+                android:orientation="vertical"
+                android:background="@drawable/wait"
+                android:paddingLeft="12dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_img_wh"
+                    android:layout_height="@dimen/toolbar_img_wh"
+                    android:src="@drawable/car_white"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完成"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fontSize_S"
+                    />
+
+            </LinearLayout>
+            <!-- <TextView
+                 android:layout_width="@dimen/pro_item_width"
+                 android:layout_height="match_parent"
+                 android:minHeight="@dimen/pro_item_height"
+                 android:background="@drawable/wait"
+                 android:text="完成"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/fontSize_S"
+                 android:gravity="center_vertical"
+                 android:paddingLeft="12dp"
+                 ></TextView>-->
+            <com.asdf1st.mydemo.Utils.NoScrollGridView
+                android:id="@+id/gv_text4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:verticalSpacing="5dp"
+                android:horizontalSpacing="10dp"
+                android:scrollbars="none"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                ></com.asdf1st.mydemo.Utils.NoScrollGridView>
+        </LinearLayout>
+    </com.asdf1st.mydemo.UI.Drag.DragLayout>
+</ScrollView>
+
