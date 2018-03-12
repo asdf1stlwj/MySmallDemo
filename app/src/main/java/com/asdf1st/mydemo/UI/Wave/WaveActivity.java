@@ -12,12 +12,12 @@ public class WaveActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wave);
         waveView=findViewById(R.id.waveView);
-        //waveView.startMove();
+        waveView.startMove();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        //waveView.stopMove();
+        waveView.stopMove();
     }
 }
