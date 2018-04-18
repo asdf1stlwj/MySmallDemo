@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.asdf1st.mydemo.ImageControl.ChooseImageActivity;
 import com.asdf1st.mydemo.Scan.ScanTextActivity;
 import com.asdf1st.mydemo.UI.Drag.DragViewActivity;
 import com.asdf1st.mydemo.UI.Immensive.ImmensiveActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(DragViewActivity.class,"拖拽"));
         dataList.add(new ActItem(ScanTextActivity.class,"条形码扫描"));
         dataList.add(new ActItem(WaveActivity.class,"波浪效果"));
+        dataList.add(new ActItem(ChooseImageActivity.class,"拍照抠图"));
         adapter.notifyDataSetChanged();
     }
 

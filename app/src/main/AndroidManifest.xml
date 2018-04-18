@@ -42,6 +42,10 @@
         </activity>
         <activity android:name=".UI.Wave.WaveActivity">
         </activity>
+        <activity android:name=".ImageControl.ChooseImageActivity">
+        </activity>
+        <activity android:name=".ImageControl.CaptureActivity">
+        </activity>
     </application>
 
 </manifest>
