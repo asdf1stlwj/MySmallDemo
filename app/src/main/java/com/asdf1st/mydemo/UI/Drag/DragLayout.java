@@ -358,6 +358,7 @@ public class DragLayout extends LinearLayout  {
         mWindowParams.format = PixelFormat.RGBA_8888;
         // 以下属性在Layout Params中常见重力、坐标，宽高
         mWindowParams.gravity = Gravity.LEFT | Gravity.TOP;
+
         int[] location=getPointFromView(targetView);
         mWindowParams.x = location[0];
         mWindowParams.y = location[1]-statusBarh;
