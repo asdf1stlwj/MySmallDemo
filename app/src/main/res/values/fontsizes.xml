@@ -20,5 +20,20 @@
     <dimen name="fontSize_XS">15dp</dimen>
     <dimen name="fontSize_XXS">13dp</dimen>
     <dimen name="fontSize_TAB">10dp</dimen>
+    <dimen name="fontSizeXXXL">24dp</dimen>
+    <dimen name="fontSizeXXL">22dp</dimen>
+    <dimen name="fontSizeXL">20dp</dimen>
+    <!-- 对应设计规范30px -->
+    <dimen name="fontSizeL">18dp</dimen>
+    <!-- 对应设计规范28px -->
+    <dimen name="fontSizeM">16dp</dimen>
+    <!-- 对应设计规范26px -->
+    <dimen name="fontSizeMS">15dp</dimen>
+    <!-- 对应设计规范24px -->
+    <dimen name="fontSizeS">14dp</dimen>
+    <!-- 预留大小 -->
+    <dimen name="fontSizeXS">12dp</dimen>
+    <!-- 对应设计规范18px -->
+    <dimen name="fontSizeXXS">10dp</dimen>
 
 </resources>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--  半透明黑色    -->
+    <color name="translucent_black">#7f000000</color>
+    <color name="lr_red">#ff3332</color>
+    <color name="themegray">#797979</color><!-- 主色调的灰色，用于各种页面的分类标题等 -->
+    <color name="yellow_color">#b5d301</color>
+    <color name="orango_color">#f26f5d</color>
+    <color name="blue_color">#1bc5af</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
     <color name="font_blackD2">#353535</color>
     <color name="font_blackD1">#565656</color>
     <color name="font_grayD2">#999999</color>
@@ -26,5 +34,59 @@
     <color name="result_view">#b0000000</color>
     <color name="viewfinder_mask">#60000000</color>
     <color name="possible_result_points">#c0ffff00</color>
+    <!--页面主色调-->
+    <color name="theme_color_dark">#004296</color>
+    <color name="blue2">#0E8CFF</color>
+    <color name="sel_blue">#a7dce4</color>
+    <color name="bg_color">#F5F5F5</color>
+    <color name="headbg_color">#F9F9F9</color>
+    <color name="line_color">#e6e6e6</color><!-- 分割线颜色 -->
+    <color name="gray1">#F4F4F7</color>
+    <color name="gray2">#E8E8F5</color>
+    <!-- D1即deep1，颜色深度，数字越高颜色越深 -->
+    <color name="lr_grayD">#EFEFF4</color>
+    <color name="lr_grayD1">#EDEDED</color>
+    <color name="lr_grayD2">#D2D2D2</color>
+    <color name="lr_grayD3">#7C7D82</color>
+    <color name="lr_gray4">#E8E8F5</color>
+    <color name="lr_gray5">#F4F4F7</color>
+    <color name="ex_text_blue">#0a53a6</color>
+    <color name="tab_bg_blue">#eef6ff</color>
+    <color name="gray_hint">#BFC2D2</color>
+    <!--单击颜色-->
+    <color name="selected_black_alpha">#1e000000</color>
+    <color name="selected_black_alpha_2x">#37000000</color>
+    <color name="selected_white_alpha">#7effffff</color>
+    <color name="bg_gray">#666666</color>
+    <drawable name="white_bg">#ffffff</drawable>
+    <drawable name="blue_bg">#ff28A6E8</drawable>
+    <drawable name="calendar_bg">#EDF0F6</drawable>
+    <drawable name="transparent_bg">#00000000</drawable>
 
+    <color name="black_cg">#000000</color>
+    <color name="white_cg">#ffffff</color>
+    <color name="blue_cg">#28A6E8</color>
+    <color name="transparent_cg">#000000</color>
+
+    <color name="black">#000000</color>
+    <color name="blue">#28A6E8</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="calendar_title">#EDF0F6</color>
+    <color name="line">#d4d4d4</color>
+    <color name="selection">#b1dce2ff</color>
+
+    <drawable name="list_bg">#32a8da</drawable>
+    <drawable name="list_item_unselected">#50ffffff</drawable>
+    <drawable name="list_item_selected">#32a8da</drawable>
+    <color name="list_divider">#C0C0C0</color>
+
+    <color name="calendar_zhe_day">#faedda</color>
+    <color name="noMonth">#c0c0c0</color>
+    <color name="cal_text">#603b07</color>
+    <color name="gray">#8C8C8C</color>
+    <color name="tit_blue">#079ab4</color>
+    <color name="tit_blue1">#1ec9e7</color>
+    <color name="tit_orange">#ed6d23</color>
+    <color name="font_black">#333333</color>
 </resources>

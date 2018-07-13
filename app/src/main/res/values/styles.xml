@@ -5,9 +5,24 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="TranslucentTheme" parent="AppTheme">
+    <style name="TranslucentTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
 
         <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
     </style>
+    <style name="HeadIconStyle">
+        <item name="android:layout_width">@dimen/comm_head_btn_wh</item>
+        <item name="android:layout_height">@dimen/comm_head_btn_wh</item>
+        <item name="android:padding">@dimen/comm_head_btn_padding</item>
+        <item name="android:background">@drawable/bg_selectable_icon_transparent_alphablack</item>
+    </style>
 
+    <style name="HeadTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/fontSizeM</item>
+        <item name="android:background">@drawable/bg_selectable_icon_transparent_alphablack</item>
+    </style>
 </resources>

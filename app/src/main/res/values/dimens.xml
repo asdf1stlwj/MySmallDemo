@@ -48,6 +48,28 @@
 
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
+    <!-- 导航栏高度  -->
+    <dimen name="nav_height">46dp</dimen>
+    <dimen name="nav_height_trans">71dp</dimen>
+    <dimen name="statusbar_height">25dp</dimen>
+    <dimen name="comm_line_height">10dp</dimen>
+    <dimen name="comm_button_height">40dp</dimen>
+    <!-- 顶部图标按钮宽高  -->
+    <dimen name="comm_head_btn_wh">46dp</dimen>
+    <dimen name="comm_head_btn_padding">11.5dp</dimen>
+    <dimen name="comm_head_btn_margin">0dp</dimen>
 
+    <!-- 发现和我模块的文字 图片 间隙 -->
+    <dimen name="discovery_icon_wh">45dp</dimen>
+    <dimen name="discovery_item_lineheight">20dp</dimen>
+    <dimen name="discovery_item_margin">5dp</dimen>
+
+    <dimen name="account_btn_height">40dp</dimen>
+    <dimen name="common_margin_hor">20dp</dimen>
+    <dimen name="common_margin_top">30dp</dimen>
+    <dimen name="common_margin_bottom">40dp</dimen>
+
+    <dimen name="comm_btn_height_large">60dp</dimen>
+    <dimen name="comm_btn_height_middle">35dp</dimen>
 
 </resources>

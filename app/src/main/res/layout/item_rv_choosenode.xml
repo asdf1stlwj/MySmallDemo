@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_chooseItem"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_round_corner_item"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fontSizeMS"
+        android:padding="5dp"/>
+
+</LinearLayout>

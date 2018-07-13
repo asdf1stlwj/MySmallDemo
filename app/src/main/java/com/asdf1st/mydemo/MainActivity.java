@@ -15,7 +15,9 @@ import android.widget.Toast;
 
 import com.asdf1st.mydemo.ImageControl.ChooseImageActivity;
 import com.asdf1st.mydemo.Scan.ScanTextActivity;
+import com.asdf1st.mydemo.UI.Collapsed.CollapseActivity;
 import com.asdf1st.mydemo.UI.Drag.DragViewActivity;
+import com.asdf1st.mydemo.UI.DragSort.DragSortActivity;
 import com.asdf1st.mydemo.UI.Immensive.ImmensiveActivity;
 import com.asdf1st.mydemo.UI.Progess.ProgressDialogActivity;
 import com.asdf1st.mydemo.UI.Wave.WaveActivity;
@@ -51,6 +53,8 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(ScanTextActivity.class,"条形码扫描"));
         dataList.add(new ActItem(WaveActivity.class,"波浪效果"));
         dataList.add(new ActItem(ChooseImageActivity.class,"拍照抠图"));
+        dataList.add(new ActItem(CollapseActivity.class,"collapse"));
+        dataList.add(new ActItem(DragSortActivity.class,"拖拽排序"));
         adapter.notifyDataSetChanged();
     }
 
