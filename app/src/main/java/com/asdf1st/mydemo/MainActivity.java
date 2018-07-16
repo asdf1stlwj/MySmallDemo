@@ -20,6 +20,7 @@ import com.asdf1st.mydemo.UI.Drag.DragViewActivity;
 import com.asdf1st.mydemo.UI.DragSort.DragSortActivity;
 import com.asdf1st.mydemo.UI.Immensive.ImmensiveActivity;
 import com.asdf1st.mydemo.UI.Progess.ProgressDialogActivity;
+import com.asdf1st.mydemo.UI.Swipe.SwipeActivity;
 import com.asdf1st.mydemo.UI.Wave.WaveActivity;
 
 import java.util.ArrayList;
@@ -55,6 +56,7 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(ChooseImageActivity.class,"拍照抠图"));
         dataList.add(new ActItem(CollapseActivity.class,"collapse"));
         dataList.add(new ActItem(DragSortActivity.class,"拖拽排序"));
+        dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
         adapter.notifyDataSetChanged();
     }
 

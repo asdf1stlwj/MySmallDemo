@@ -4,19 +4,29 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.Data;
+import com.asdf1st.mydemo.Utils.MyItemTouchHelperCallback;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class DragSortActivity extends AppCompatActivity implements CurrentNodeAdapter.OnCurNodeSelListener, ChooseNodeAdapter.OnChooseSelListener {
+public class DragSortActivity extends AppCompatActivity implements CurrentNodeAdapter.OnCurNodeSelListener, ChooseNodeAdapter.OnChooseSelListener, MyItemTouchHelperCallback.OnItemMoveListener {
     List<Data> chooseNodeList =new ArrayList<>();
     List<Data> curNodeList=new ArrayList<>();
     private RecyclerView currentNodeView, chooseNodeView;
     CurrentNodeAdapter currentNodeAdapter;
     ChooseNodeAdapter chooseNodeAdapter;
+    ItemTouchHelper itemTouchHelper;
+    TextView tv_finish;
+    String tag="lwj";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +36,17 @@ public class DragSortActivity extends AppCompatActivity implements CurrentNodeAd
     }
 
     private void initView() {
+        tv_finish= (TextView) findViewById(R.id.right_layout);
         chooseNodeView= (RecyclerView) findViewById(R.id.rv_chooseNode);
         currentNodeView= (RecyclerView) findViewById(R.id.rv_curNode);
         chooseNodeView.setNestedScrollingEnabled(false);
         currentNodeView.setNestedScrollingEnabled(false);
+        tv_finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                printfStrs(curNodeList);
+            }
+        });
     }
 
     private void initData() {
@@ -50,6 +67,11 @@ public class DragSortActivity extends AppCompatActivity implements CurrentNodeAd
         chooseNodeView.setAdapter(chooseNodeAdapter);
         currentNodeAdapter.setOnNodeSelListener(this);
         chooseNodeAdapter.setOnChooseSelListener(this);
+        itemTouchHelper =new ItemTouchHelper(
+                new MyItemTouchHelperCallback
+                        (this,currentNodeAdapter,this)
+                );
+        itemTouchHelper.attachToRecyclerView(currentNodeView);
     }
 
 
@@ -78,5 +100,21 @@ public class DragSortActivity extends AppCompatActivity implements CurrentNodeAd
             curNodeList.remove(data);
             currentNodeAdapter.notifyDataSetChanged();
         }
+    }
+
+    private void printfStrs(List<Data> dataList){
+        String rs="";
+        for (Data data:dataList){
+            rs+=data.getName();
+            rs+=",";
+        }
+        Log.e(tag,rs);
+        Toast.makeText(this,rs,Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onItemMove(int fromPosition, int toPosition) {
+        // 拖动排序的回调,这里交换集合中数据的位置
+        Collections.swap(curNodeList, fromPosition, toPosition);
     }
 }
