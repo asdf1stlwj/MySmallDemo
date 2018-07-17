@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.asdf1st.mydemo.ImageControl.ChooseImageActivity;
+import com.asdf1st.mydemo.RecyclerView.RecyclerActivity;
 import com.asdf1st.mydemo.Scan.ScanTextActivity;
 import com.asdf1st.mydemo.UI.Collapsed.CollapseActivity;
 import com.asdf1st.mydemo.UI.Drag.DragViewActivity;
@@ -57,6 +58,7 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(CollapseActivity.class,"collapse"));
         dataList.add(new ActItem(DragSortActivity.class,"拖拽排序"));
         dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
+        dataList.add(new ActItem(RecyclerActivity.class,"RecyclerView添加header"));
         adapter.notifyDataSetChanged();
     }
 
