@@ -41,8 +41,7 @@
             android:theme="@style/TranslucentTheme" />
         <activity android:name=".UI.DragSort.DragSortActivity" />
         <activity android:name=".UI.Swipe.SwipeActivity" />
-        <activity android:name=".RecyclerView.RecyclerActivity" />
-        <activity android:name=".AIDL.AIDLTextActivity"></activity>
+        <activity android:name=".RecyclerView.RecyclerActivity"></activity>
     </application>
 
 </manifest>
