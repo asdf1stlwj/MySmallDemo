@@ -21,6 +21,7 @@ import com.asdf1st.mydemo.UI.Immensive.ImmensiveActivity;
 import com.asdf1st.mydemo.UI.Progess.ProgressDialogActivity;
 import com.asdf1st.mydemo.UI.Swipe.SwipeActivity;
 import com.asdf1st.mydemo.UI.Wave.WaveActivity;
+import com.asdf1st.mydemo.aidl.BookManagerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +58,11 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(DragSortActivity.class,"拖拽排序"));
         dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
         dataList.add(new ActItem(RecyclerActivity.class,"RecyclerView添加header"));
+<<<<<<< HEAD
         dataList.add(new ActItem(RefreshLayoutActivity.class,"NestScroll下拉加载"));
+=======
+        dataList.add(new ActItem(BookManagerActivity.class,"AIDL测试"));
+>>>>>>> 495e13fd25ffdbcfe3e3f8784342553d6c5aa927
         adapter.notifyDataSetChanged();
     }
 

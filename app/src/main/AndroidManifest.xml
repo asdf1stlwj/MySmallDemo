@@ -38,12 +38,25 @@
         <activity android:name=".ImageControl.CaptureActivity"/>
         <activity
             android:name=".UI.Collapsed.CollapseActivity"
+<<<<<<< HEAD
             android:theme="@style/TranslucentTheme"/>
         <activity android:name=".UI.DragSort.DragSortActivity"/>
         <activity android:name=".UI.Swipe.SwipeActivity"/>
         <activity android:name=".RecyclerView1.RecyclerActivity"/>
         <activity android:name=".RecyclerView2.RefreshLayoutActivity">
         </activity>
+=======
+            android:theme="@style/TranslucentTheme" />
+        <activity android:name=".UI.DragSort.DragSortActivity" />
+        <activity android:name=".UI.Swipe.SwipeActivity" />
+        <activity android:name=".RecyclerView.RecyclerActivity" />
+
+        <service
+            android:name=".aidl.BookManagerService"
+            android:process=":remote" />
+
+        <activity android:name=".aidl.BookManagerActivity"></activity>
+>>>>>>> 495e13fd25ffdbcfe3e3f8784342553d6c5aa927
     </application>
 
 </manifest>
