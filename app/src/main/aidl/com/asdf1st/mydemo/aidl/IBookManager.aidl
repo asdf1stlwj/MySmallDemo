@@ -1,6 +1,8 @@
 // IBookManager.aidl
 package com.asdf1st.mydemo.aidl;
 import com.asdf1st.mydemo.aidl.Book;
+import com.asdf1st.mydemo.aidl.IOnNewBookArrivedListener;
+
 // Declare any non-default types here with import statements
 
 interface IBookManager {
@@ -13,4 +15,6 @@ interface IBookManager {
     void addBook(in Book book);
 
     List<Book> getBookList();
+    void registerListener(IOnNewBookArrivedListener listener);
+    void unRegisterListener(IOnNewBookArrivedListener listener);
 }

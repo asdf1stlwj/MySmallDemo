@@ -41,7 +41,13 @@
             android:theme="@style/TranslucentTheme" />
         <activity android:name=".UI.DragSort.DragSortActivity" />
         <activity android:name=".UI.Swipe.SwipeActivity" />
-        <activity android:name=".RecyclerView.RecyclerActivity"></activity>
+        <activity android:name=".RecyclerView.RecyclerActivity" />
+
+        <service
+            android:name=".aidl.BookManagerService"
+            android:process=":remote" />
+
+        <activity android:name=".aidl.BookManagerActivity"></activity>
     </application>
 
 </manifest>
