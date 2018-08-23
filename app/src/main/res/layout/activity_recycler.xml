@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.asdf1st.mydemo.RecyclerView.RecyclerActivity">
-    <com.asdf1st.mydemo.Utils.WrapRecyclerView
+    tools:context="com.asdf1st.mydemo.RecyclerView1.RecyclerActivity">
+    <com.asdf1st.mydemo.RecyclerView1.RefreshRecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.asdf1st.mydemo.Utils.WrapRecyclerView>
+        android:layout_height="match_parent"></com.asdf1st.mydemo.RecyclerView1.RefreshRecyclerView>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.asdf1st.mydemo.RecyclerView;
+package com.asdf1st.mydemo.RecyclerView1;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -1,4 +1,4 @@
-package com.asdf1st.mydemo.Utils;
+package com.asdf1st.mydemo.RecyclerView1;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -15,7 +15,7 @@ public class WrapRecyclerView extends RecyclerView {
     // 包裹了一层的头部底部Adapter
     private WrapRecyclerAdapter mWrapRecyclerAdapter;
     // 这个是列表数据的Adapter
-    private RecyclerView.Adapter mAdapter;
+    private Adapter mAdapter;
 
     public WrapRecyclerView(Context context) {
         super(context);

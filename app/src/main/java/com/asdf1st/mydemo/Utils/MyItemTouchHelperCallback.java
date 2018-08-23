@@ -17,7 +17,8 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
     public Context context;
     public OnItemMoveListener itemMoveListener;
     public OnItemRemoveListener itemRemoveListener;
-
+    public boolean dragEnable=false;
+    public boolean swipeEnable=false;
     public MyItemTouchHelperCallback(Context context, RecyclerView.Adapter adapter){
         this.context=context;
         this.adapter=adapter;
@@ -27,11 +28,15 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
         this.context=context;
         this.adapter=adapter;
         this.itemMoveListener=itemMoveListener;
+        dragEnable=true;
+        swipeEnable=false;
     }
     public MyItemTouchHelperCallback(Context context, RecyclerView.Adapter adapter, OnItemRemoveListener itemRemoveListener){
         this.context=context;
         this.adapter=adapter;
         this.itemRemoveListener=itemRemoveListener;
+        swipeEnable=true;
+        dragEnable=false;
     }
 
     /**
@@ -128,6 +133,24 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
             viewHolder.itemView.setScaleY((float) 1.0);
 
         super.clearView(recyclerView, viewHolder);
+    }
+
+    /**
+     * 是否支持长按开始拖拽,默认开启
+     * 可以不开启,然后在长按 item 的时候,手动 调用 mItemTouchHelper.startDrag(myHolder) 开启,更加灵活
+     */
+    @Override
+    public boolean isLongPressDragEnabled() {
+        return dragEnable;
+    }
+
+    /**
+     * 是否支持滑动删除,默认开启
+     * 可以不开启,然后在长按 item 的时候,手动 调用 mItemTouchHelper.startSwipe(myHolder) 开启,更加灵活
+     */
+    @Override
+    public boolean isItemViewSwipeEnabled() {
+        return swipeEnable;
     }
 
     public interface OnItemMoveListener{

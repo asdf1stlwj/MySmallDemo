@@ -1,4 +1,4 @@
-package com.asdf1st.mydemo.Utils;
+package com.asdf1st.mydemo.RecyclerView1;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
