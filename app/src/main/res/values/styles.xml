@@ -9,6 +9,7 @@
 
         <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
     </style>
+
     <style name="HeadIconStyle">
         <item name="android:layout_width">@dimen/comm_head_btn_wh</item>
         <item name="android:layout_height">@dimen/comm_head_btn_wh</item>
@@ -25,4 +26,8 @@
         <item name="android:textSize">@dimen/fontSizeM</item>
         <item name="android:background">@drawable/bg_selectable_icon_transparent_alphablack</item>
     </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.Data;
-import com.asdf1st.mydemo.Utils.MyItemTouchHelperCallback;
 
 import java.util.ArrayList;
 import java.util.Collections;

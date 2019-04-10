@@ -4,16 +4,18 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.asdf1st.mydemo.Algorithm.AlgorithmActivity;
 import com.asdf1st.mydemo.ImageControl.ChooseImageActivity;
+import com.asdf1st.mydemo.Mqtt.MyMqttActivity;
 import com.asdf1st.mydemo.RecyclerView1.RecyclerActivity;
 import com.asdf1st.mydemo.RecyclerView2.RefreshLayoutActivity;
 import com.asdf1st.mydemo.Scan.ScanTextActivity;
+import com.asdf1st.mydemo.Socket.SocketClientActivity;
 import com.asdf1st.mydemo.UI.Collapsed.CollapseActivity;
 import com.asdf1st.mydemo.UI.Drag.DragViewActivity;
 import com.asdf1st.mydemo.UI.DragSort.DragSortActivity;
@@ -22,6 +24,7 @@ import com.asdf1st.mydemo.UI.Progess.ProgressDialogActivity;
 import com.asdf1st.mydemo.UI.Swipe.SwipeActivity;
 import com.asdf1st.mydemo.UI.Wave.WaveActivity;
 import com.asdf1st.mydemo.aidl.BookManagerActivity;
+import com.asdf1st.mydemo.location.LocateActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +34,9 @@ public class MainActivity extends Activity {
     private ListView lv_actitems;
     private List<ActItem> dataList=new ArrayList<>();
     private ActItemAdapter adapter;
-    private String[] permissions={Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.SYSTEM_ALERT_WINDOW,Manifest.permission.CAMERA};
+    private String[] permissions={Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.SYSTEM_ALERT_WINDOW,Manifest.permission.CAMERA,Manifest.permission.INTERNET,
+    Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION,
+    Manifest.permission.WAKE_LOCK,Manifest.permission.READ_PHONE_STATE,Manifest.permission.READ_EXTERNAL_STORAGE};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,13 +61,14 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(ChooseImageActivity.class,"拍照抠图"));
         dataList.add(new ActItem(CollapseActivity.class,"collapse"));
         dataList.add(new ActItem(DragSortActivity.class,"拖拽排序"));
-        dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
-        dataList.add(new ActItem(RecyclerActivity.class,"RecyclerView添加header"));
-<<<<<<< HEAD
-        dataList.add(new ActItem(RefreshLayoutActivity.class,"NestScroll下拉加载"));
-=======
-        dataList.add(new ActItem(BookManagerActivity.class,"AIDL测试"));
->>>>>>> 495e13fd25ffdbcfe3e3f8784342553d6c5aa927
+        dataList.add(new ActItem(AlgorithmActivity.class,"快速排序"));
+        dataList.add(new ActItem(SocketClientActivity.class,"socket"));
+        dataList.add(new ActItem(LocateActivity.class,"原生定位"));
+        dataList.add(new ActItem(MyMqttActivity.class,"Mqtt"));
+        //dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
+//        dataList.add(new ActItem(RecyclerActivity.class,"RecyclerView添加header"));
+//        dataList.add(new ActItem(RefreshLayoutActivity.class,"NestScroll下拉加载"));
+        //dataList.add(new ActItem(BookManagerActivity.class,"AIDL测试"));
         adapter.notifyDataSetChanged();
     }
 
@@ -86,7 +92,7 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,  int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode){
             case PERMISSION_REQUEST_CODE:

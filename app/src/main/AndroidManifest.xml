@@ -1,55 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.asdf1st.mydemo">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.asdf1st.mydemo">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        tools:replace="android:icon, android:label,android:theme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.Immensive.ImmensiveActivity"/>
+        <activity android:name=".UI.Immensive.ImmensiveActivity" />
         <activity
             android:name=".UI.Immensive.ChenJinActivity1"
-            android:theme="@style/TranslucentTheme"/>
-        <activity android:name=".UI.Immensive.ChenJinActivity2"/>
-        <activity android:name=".UI.Progess.ProgressDialogActivity"/>
-        <activity android:name=".UI.Drag.DragViewActivity"/>
+            android:theme="@style/TranslucentTheme" />
+        <activity android:name=".UI.Immensive.ChenJinActivity2" />
+        <activity android:name=".UI.Progess.ProgressDialogActivity" />
+        <activity android:name=".UI.Drag.DragViewActivity" />
         <activity
             android:name=".Scan.ScanBarCodeActivity"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
             android:theme="@style/zxing_CaptureTheme"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity android:name=".Scan.ScanTextActivity"/>
-        <activity android:name=".UI.Wave.WaveActivity"/>
-        <activity android:name=".ImageControl.ChooseImageActivity"/>
-        <activity android:name=".ImageControl.CaptureActivity"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Scan.ScanTextActivity" />
+        <activity android:name=".UI.Wave.WaveActivity" />
+        <activity android:name=".ImageControl.ChooseImageActivity" />
+        <activity android:name=".ImageControl.CaptureActivity" />
         <activity
             android:name=".UI.Collapsed.CollapseActivity"
-            android:theme="@style/TranslucentTheme"/>
-        <activity android:name=".UI.DragSort.DragSortActivity"/>
-        <activity android:name=".UI.Swipe.SwipeActivity"/>
-        <activity android:name=".RecyclerView1.RecyclerActivity"/>
-        <activity android:name=".RecyclerView2.RefreshLayoutActivity">
-        </activity>
+            android:theme="@style/TranslucentTheme" />
+        <activity android:name=".UI.DragSort.DragSortActivity" />
+        <activity android:name=".UI.Swipe.SwipeActivity" />
+        <activity android:name=".RecyclerView1.RecyclerActivity" />
+        <activity android:name=".RecyclerView2.RefreshLayoutActivity" />
 
         <service
             android:name=".aidl.BookManagerService"
             android:process=":remote" />
 
-        <activity android:name=".aidl.BookManagerActivity"></activity>
+        <activity android:name=".aidl.BookManagerActivity" />
+        <activity android:name=".Algorithm.AlgorithmActivity" />
+        <activity android:name=".Socket.SocketClientActivity" />
+        <activity android:name=".location.LocateActivity" />
+        <!-- Mqtt服务 -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+        <activity
+            android:name=".Mqtt.MyMqttActivity"
+            android:label="@string/title_activity_my_mqtt"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".Scan.MyQrCodeActivity"></activity>
     </application>
 
 </manifest>

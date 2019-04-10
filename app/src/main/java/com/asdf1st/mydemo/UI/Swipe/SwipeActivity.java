@@ -8,7 +8,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.Data;
-import com.asdf1st.mydemo.Utils.MyItemTouchHelperCallback;
+import com.asdf1st.mydemo.UI.DragSort.MyItemTouchHelperCallback;
 
 import java.util.ArrayList;
 import java.util.List;

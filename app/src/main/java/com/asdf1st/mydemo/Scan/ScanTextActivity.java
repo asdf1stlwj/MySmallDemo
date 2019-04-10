@@ -12,12 +12,14 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 public class ScanTextActivity extends Activity {
-    Button btn_scan_barcode;
+    Button btn_scan_barcode,btn_scan_myqrcode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_text);
+
         btn_scan_barcode=findViewById(R.id.btn_scan_barcode);
+        btn_scan_myqrcode=findViewById(R.id.btn_myqrcode);
         btn_scan_barcode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,6 +29,18 @@ public class ScanTextActivity extends Activity {
                 integrator.setCameraId(0); //前置或者后置摄像头
                 integrator.setBeepEnabled(false); //扫描成功的「哔哔」声，默认开启
                 integrator.setCaptureActivity(ScanBarCodeActivity.class);
+                integrator.initiateScan();
+            }
+        });
+        btn_scan_myqrcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                IntentIntegrator integrator = new IntentIntegrator(ScanTextActivity.this);
+                integrator.setPrompt(""); //底部的提示文字，设为""可以置空
+                integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+                integrator.setCameraId(0); //前置或者后置摄像头
+                integrator.setBeepEnabled(false); //扫描成功的「哔哔」声，默认开启
+                integrator.setCaptureActivity(MyQrCodeActivity.class);
                 integrator.initiateScan();
             }
         });

@@ -1,4 +1,4 @@
-package com.asdf1st.mydemo.Utils;
+package com.asdf1st.mydemo.UI.DragSort;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,12 +7,14 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 
 /**
  * Created by User on 2018/7/13.
  */
 
 public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
+    private String TAG="ItemTouchHelperCallback";
     private RecyclerView.Adapter adapter;
     public Context context;
     public OnItemMoveListener itemMoveListener;
@@ -67,10 +69,12 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
      */
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+
         // 相同 viewType 之间才能拖动交换
         if (viewHolder.getItemViewType() == target.getItemViewType()) {
             int fromPosition = viewHolder.getAdapterPosition();
             int toPosition = target.getAdapterPosition();
+            Log.e(TAG, "onMove: from "+ fromPosition+" to "+toPosition);
             if (fromPosition < toPosition) {
                 //途中所有的item位置都要移动
                 for (int i = fromPosition; i < toPosition; i++) {

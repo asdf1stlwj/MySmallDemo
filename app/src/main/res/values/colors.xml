@@ -90,4 +90,6 @@
     <color name="tit_orange">#ed6d23</color>
     <color name="font_black">#333333</color>
     <color name="pink1">#FF4081</color>
+    <color name="fontColor">#8a000000</color>
+    <color name="fontColor2">#c2000000</color>
 </resources>

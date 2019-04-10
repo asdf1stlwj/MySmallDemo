@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_scan_text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.asdf1st.mydemo.Scan.ScanTextActivity">
     <Button
         android:id="@+id/btn_scan_barcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="条形码扫描"/>
-</RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_myqrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义扫码页面"/>
+</LinearLayout>
