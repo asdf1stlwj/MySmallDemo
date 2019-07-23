@@ -2,6 +2,7 @@ package com.asdf1st.mydemo.UI.Drag;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -353,7 +354,11 @@ public class DragLayout extends LinearLayout  {
         mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         // 设置窗口类型，一共有三种Application windows, Sub-windows, System windows
         // API中以TYPE_开头的常量有23个
-        mWindowParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mWindowParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        }else {
+            mWindowParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        }
         // 设置期望的bitmap格式
         mWindowParams.format = PixelFormat.RGBA_8888;
         // 以下属性在Layout Params中常见重力、坐标，宽高

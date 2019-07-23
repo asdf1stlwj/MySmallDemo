@@ -11,6 +11,8 @@ import android.view.View;
 import com.asdf1st.mydemo.Base.Presenter.IPresenter;
 import com.asdf1st.mydemo.R;
 
+import butterknife.BindView;
+
 public class MyMqttActivity extends BaseMqttActivity {
     @Override
     public int getLayoutId() {

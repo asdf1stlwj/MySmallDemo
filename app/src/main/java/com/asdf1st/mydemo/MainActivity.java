@@ -2,8 +2,11 @@ package com.asdf1st.mydemo;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.ListView;
@@ -23,6 +26,7 @@ import com.asdf1st.mydemo.UI.Immensive.ImmensiveActivity;
 import com.asdf1st.mydemo.UI.Progess.ProgressDialogActivity;
 import com.asdf1st.mydemo.UI.Swipe.SwipeActivity;
 import com.asdf1st.mydemo.UI.Wave.WaveActivity;
+import com.asdf1st.mydemo.Video.Ijkplayer.IjkPlayerActivity;
 import com.asdf1st.mydemo.aidl.BookManagerActivity;
 import com.asdf1st.mydemo.location.LocateActivity;
 
@@ -65,10 +69,12 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(SocketClientActivity.class,"socket"));
         dataList.add(new ActItem(LocateActivity.class,"原生定位"));
         dataList.add(new ActItem(MyMqttActivity.class,"Mqtt"));
+        dataList.add(new ActItem(IjkPlayerActivity.class,"IjkPlayer"));
         //dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
 //        dataList.add(new ActItem(RecyclerActivity.class,"RecyclerView添加header"));
 //        dataList.add(new ActItem(RefreshLayoutActivity.class,"NestScroll下拉加载"));
         //dataList.add(new ActItem(BookManagerActivity.class,"AIDL测试"));
+
         adapter.notifyDataSetChanged();
     }
 
@@ -81,7 +87,15 @@ public class MainActivity extends Activity {
                 permissionLists.add(permission);
             }
         }
-
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivityForResult(intent, 1);
+            } else {
+                //TODO do something you need
+            }
+        }
         if (!permissionLists.isEmpty()) {
             //申请权限回调函数
             ActivityCompat.requestPermissions(this, permissionLists.toArray(new String[permissionLists.size()]), PERMISSION_REQUEST_CODE);

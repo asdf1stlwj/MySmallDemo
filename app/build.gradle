@@ -1,14 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'maven'
 android {
-    compileSdkVersion 27
-    //buildToolsVersion '26.0.2'
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.asdf1st.mydemo"
-        minSdkVersion 21
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -34,15 +33,15 @@ uploadArchives {
 
 
 dependencies {
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //support库要和上面编译android版本对应 例如上面buildtoolVersion27这里也要27.x.x
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support:support-v4:27.1.1'
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportToolsVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportToolsVersion"
+    implementation "com.android.support:support-v4:$rootProject.ext.supportToolsVersion"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.supportConstraintVersion"
     implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
     //implementation 'com.google.zxing:core:3.2.0'
     //GSON
@@ -58,5 +57,11 @@ dependencies {
     //Mqtt
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+
+    //IjkPlayer
+    implementation project(':ijkplayer-java')
+    implementation project(':ijkplayer-armv7a')
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
     testImplementation 'junit:junit:4.12'
 }
