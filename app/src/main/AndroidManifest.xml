@@ -20,14 +20,21 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden|locale|layoutDirection"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:replace="android:icon, android:label,android:theme">
-        <activity android:name=".Video.Ijkplayer.IjkPlayerActivity"
-            android:screenOrientation="landscape"
-            android:hardwareAccelerated="true" ></activity>
+        <activity android:name=".memoryControl.MemoryLeakActivity"></activity>
+        <activity android:name=".memoryControl.MemoryShadeActivity" />
+        <activity
+            android:name=".Video.JiaoZi.JiaoZiPlayerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Video.Ijkplayer.IjkPlayerActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

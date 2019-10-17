@@ -4,6 +4,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 
 import com.asdf1st.mydemo.Base.Presenter.IPresenter;
 import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
@@ -32,8 +33,15 @@ public class IjkPlayerActivity extends BaseActivity {
     @Override
     protected void initClass() {
         super.initClass();
-        path=FileUtils.SDPATH+"test.mp4";
+        //path=FileUtils.SDPATH+"test.mp4";
+        path="http://supportfile.video-star.com.cn:38084/fzzlm.MP4";
         initIjkPlayer();
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
     }
 
     @Override
