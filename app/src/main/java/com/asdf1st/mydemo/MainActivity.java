@@ -22,6 +22,7 @@ import com.asdf1st.mydemo.UI.Drag.DragViewActivity;
 import com.asdf1st.mydemo.UI.DragSort.DragSortActivity;
 import com.asdf1st.mydemo.UI.Immensive.ImmensiveActivity;
 import com.asdf1st.mydemo.UI.Progess.ProgressDialogActivity;
+import com.asdf1st.mydemo.UI.Swipe.SwipeActivity;
 import com.asdf1st.mydemo.UI.Wave.WaveActivity;
 import com.asdf1st.mydemo.Video.Ijkplayer.IjkPlayerActivity;
 import com.asdf1st.mydemo.Video.JiaoZi.JiaoZiPlayerActivity;
@@ -70,7 +71,7 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(IjkPlayerActivity.class,"IjkPlayer"));
         dataList.add(new ActItem(JiaoZiPlayerActivity.class,"JiaoZiVideoPlayer"));
         dataList.add(new ActItem(MemoryShadeActivity.class,"内存抖动"));
-        //dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
+        dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
 //        dataList.add(new ActItem(RecyclerActivity.class,"RecyclerView添加header"));
 //        dataList.add(new ActItem(RefreshLayoutActivity.class,"NestScroll下拉加载"));
         //dataList.add(new ActItem(BookManagerActivity.class,"AIDL测试"));

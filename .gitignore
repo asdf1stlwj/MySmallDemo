@@ -1,36 +1,52 @@
+#OSX
+
+*.DS_Store
+
+
+# Gradle files
+build/
+.gradle/
+*/build/
+
+
+# IDEA
 *.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.idea/compiler.xml
-.idea/compiler.xml
+.idea/.name
+.idea/encodings.xml
 .idea/gradle.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
 .idea/misc.xml
 .idea/modules.xml
-.idea/runConfigurations.xml
+.idea/scopes/scope_settings.xml
 .idea/vcs.xml
+.idea/workspace.xml
+.idea/libraries
 
+
+# Built application files
 *.apk
 *.ap_
+
+
+# Files for the Dalvik VM
 *.dex
+
+
+# Java class files
 *.class
-bin/
-gen/
-build/
+
+
+# Generated files
+antLauncher/bin
+antLauncher/gen
+
+
+# Local configuration file (sdk path, etc)
 local.properties
 
-*.iml
-.idea/
-*.ipr
-*.iws
-.navigation/
-.DS_Store
-gradle.properties
 
+# Log Files
+*.log
 
-.idea/misc.xml
+.idea
