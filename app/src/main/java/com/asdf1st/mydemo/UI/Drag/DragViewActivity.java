@@ -1,15 +1,23 @@
 package com.asdf1st.mydemo.UI.Drag;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.asdf1st.mydemo.Base.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.NoScrollGridView;
 
 import java.util.ArrayList;
 
-public class DragViewActivity extends Activity {
+public class DragViewActivity extends BaseActivity {
     private NoScrollGridView gv1;
     private NoScrollGridView gv2;
     private NoScrollGridView gv3;
@@ -26,15 +34,35 @@ public class DragViewActivity extends Activity {
     GridViewAdapter adapter4;
     private ViewGroup ll_one;
     private ViewGroup ll_two;
+    private int REQUEST_GET_PERMISSION=10086;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drag_view);
-        initData();
-        initView();
+    public int getLayoutId() {
+        return R.layout.activity_drag_view;
     }
 
-    private void initData() {
+    @Override
+    protected void afterInit() {
+        super.afterInit();
+        checkOverlaysPermission();
+    }
+
+    private void checkOverlaysPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Settings.canDrawOverlays(this)) {
+                Toast.makeText(this,"权限通过",Toast.LENGTH_SHORT).show();
+            }else {
+                //动态申请SYSTEM_ALERT_WINDOW
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+                intent.setData(Uri.parse("package:" + getPackageName()));
+                startActivityForResult(intent, REQUEST_GET_PERMISSION);
+            }
+        }
+    }
+
+    @Override
+    protected void initClass() {
+        super.initClass();
         dataList1=new ArrayList<>();
         dataList2=new ArrayList<>();
         dataList3=new ArrayList<>();
@@ -60,10 +88,11 @@ public class DragViewActivity extends Activity {
         dataList4.add(new GridItem("345126"));
         dataList4.add(new GridItem("896"));
         dataList4.add(new GridItem("1234ka6"));
-
     }
 
-    private void initView() {
+    @Override
+    protected void initView() {
+        super.initView();
         gv1= (NoScrollGridView) findViewById(R.id.gv_text1);
         //ll_one=findViewById(R.id.ll_one);
         gv2= (NoScrollGridView) findViewById(R.id.gv_text2);
@@ -75,7 +104,7 @@ public class DragViewActivity extends Activity {
         //dragLayout.addViewGroupToLayout(ll_one);
         adapter1=new GridViewAdapter(R.drawable.car_yellow,dataList1,this);
         gv1.setAdapter(adapter1);
-       // dragLayout.addViewGroupToLayout(ll_two);
+        // dragLayout.addViewGroupToLayout(ll_two);
         adapter2=new GridViewAdapter(R.drawable.car_red,dataList2,this);
         gv2.setAdapter(adapter2);
 
@@ -85,5 +114,29 @@ public class DragViewActivity extends Activity {
         adapter4=new GridViewAdapter(R.drawable.car_blue,dataList4,this);
         gv4.setAdapter(adapter4);
         //gv1.getItemIdAtPosition()
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //判断权限申请结果
+        super.onActivityResult(requestCode, resultCode, data);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Settings.canDrawOverlays(this)){
+                Toast.makeText(this,"权限通过",Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this,"你没有开启权限哦,页面即将关闭",Toast.LENGTH_SHORT).show();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        finish();
+                    }
+                },2000);
+            }
+        }
+    }
+
+    @Override
+    public IPresenter createPresenter() {
+        return null;
     }
 }
