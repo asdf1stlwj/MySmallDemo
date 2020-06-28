@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    tools:context=".UI.Animation.AnimationMoveActivity">
+    <include layout="@layout/layout_common_header"></include>
+    <View
+        android:id="@+id/view_tar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:background="#00ff00"
+        android:layout_below="@+id/ll_header"
+        android:layout_alignParentRight="true"></View>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_animation_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:clipToPadding="false"
+        android:clipChildren="false"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>

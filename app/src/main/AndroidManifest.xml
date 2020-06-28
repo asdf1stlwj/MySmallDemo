@@ -26,7 +26,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:replace="android:icon, android:label,android:theme">
-        <activity android:name=".memoryControl.MemoryLeakActivity"></activity>
+        <activity android:name=".memoryControl.MemoryLeakActivity" />
         <activity android:name=".memoryControl.MemoryShadeActivity" />
         <activity
             android:name=".Video.JiaoZi.JiaoZiPlayerActivity"
@@ -82,6 +82,8 @@
             android:label="@string/title_activity_my_mqtt"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".Scan.MyQrCodeActivity" />
+        <activity android:name=".UI.Animation.AnimationMoveActivity" />
+        <activity android:name=".UI.Animation.AnimationMove2Activity"></activity>
     </application>
 
 </manifest>
