@@ -49,6 +49,11 @@ public class XiaoYuAnimationUtils {
         int locationStartView[] = new int[2], locationEndView[] = new int[2];
         startView.getLocationOnScreen(locationStartView);
         endView.getLocationOnScreen(locationEndView);
+        //原来取得的是View左上角坐标,要转换成View中心坐标
+        locationStartView[0]+=startView.getWidth()/2;
+        locationStartView[1]+=startView.getHeight()/2;
+        locationEndView[0]+=endView.getWidth()/2;
+        locationEndView[1]+=endView.getHeight()/2;
         ObjectAnimator translateAniX = ObjectAnimator.ofFloat(startView, "translationX", locationEndView[0] - locationStartView[0]);
         ObjectAnimator translateAniY = ObjectAnimator.ofFloat(startView, "translationY", locationEndView[1] - locationStartView[1]);
         ObjectAnimator alpha = ObjectAnimator.ofFloat(startView, "alpha", new float[]{1, 0});

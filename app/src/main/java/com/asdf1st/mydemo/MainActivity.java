@@ -74,8 +74,9 @@ public class MainActivity extends Activity {
         dataList.add(new ActItem(JiaoZiPlayerActivity.class,"JiaoZiVideoPlayer"));
         dataList.add(new ActItem(MemoryShadeActivity.class,"内存抖动"));
         dataList.add(new ActItem(SwipeActivity.class,"侧滑删除"));
+        dataList.add(new ActItem(AnimationMoveActivity.class,"item移动动画"));
         dataList.add(new ActItem(AnimationMove2Activity.class,"item移动动画2"));
-//        dataList.add(new ActItem(AnimationMoveActivity.class,"item移动动画"));
+
 //        dataList.add(new ActItem(RecyclerActivity.class,"RecyclerView添加header"));
 //        dataList.add(new ActItem(RefreshLayoutActivity.class,"NestScroll下拉加载"));
         //dataList.add(new ActItem(BookManagerActivity.class,"AIDL测试"));
