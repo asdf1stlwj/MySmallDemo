@@ -92,4 +92,5 @@
     <color name="pink1">#FF4081</color>
     <color name="fontColor">#8a000000</color>
     <color name="fontColor2">#c2000000</color>
+    <color name="ijk_transparent_dark">#77000000</color>
 </resources>

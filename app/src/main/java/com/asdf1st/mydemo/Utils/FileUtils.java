@@ -20,13 +20,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Created by wanghao on 2016/7/14.
+ *
  */
 public class FileUtils {
-    public static String SDPATH = Environment.getExternalStorageDirectory() + "/";
-    public static String VIDEOPATH="bs02Video/";
-    //public static String IMAGEPATH="zhijiaimage/";
-
+    public static String SdCardPath = Environment.getExternalStorageDirectory() + "/";
 
     /**
      * 获取到sd卡的根目录，并以String形式返回
@@ -34,8 +31,8 @@ public class FileUtils {
      * @return
      */
     public static String getSDCardPath() {
-        SDPATH = Environment.getExternalStorageDirectory() + "/";
-        return SDPATH;
+        SdCardPath = Environment.getExternalStorageDirectory() + "/";
+        return SdCardPath;
     }
 
     /**

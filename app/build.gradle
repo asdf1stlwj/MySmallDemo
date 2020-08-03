@@ -22,6 +22,8 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+
+    sourceSets.main.jniLibs.srcDirs = ['src/main/libs']
 }
 
 
@@ -66,8 +68,7 @@ dependencies {
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 
     //IjkPlayer
-    implementation project(':ijkplayer-java')
-    implementation project(':ijkplayer-armv7a')
+    implementation project(':ijkplayer')
 
     implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
     testImplementation 'junit:junit:4.12'
