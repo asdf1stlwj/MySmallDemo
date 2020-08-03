@@ -1,1 +1,1 @@
-include ':app', ':socketServer', ':ijkplayer-java', ':ijkplayer-armv7a', ':jiaozivideoplayer'
+include ':app', ':socketServer', ':ijkplayer', ':jiaozivideoplayer'
