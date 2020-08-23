@@ -47,7 +47,7 @@
             />
 
     </RelativeLayout>
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -65,7 +65,7 @@
                 android:paddingTop="18dp"
                 android:text="常用节点"
                 android:textColor="@color/blue2"/>
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_curNode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                 android:paddingTop="10dp"
                 android:text="可选节点"
                 android:textColor="@color/blue2"/>
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_chooseNode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,6 +100,6 @@
                 android:visibility="gone"
                 android:textSize="16sp"/>
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

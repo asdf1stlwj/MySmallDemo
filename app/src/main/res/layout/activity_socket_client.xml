@@ -14,11 +14,11 @@
         android:padding="15dp"
         android:visibility="gone"
         />
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_msg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6"></android.support.v7.widget.RecyclerView>
+        android:layout_weight="6"></androidx.recyclerview.widget.RecyclerView>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"

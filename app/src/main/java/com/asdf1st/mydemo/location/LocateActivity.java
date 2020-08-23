@@ -3,7 +3,7 @@ package com.asdf1st.mydemo.location;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 

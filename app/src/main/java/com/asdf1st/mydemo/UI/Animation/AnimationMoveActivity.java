@@ -1,8 +1,8 @@
 package com.asdf1st.mydemo.UI.Animation;
 
 import android.animation.Animator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.asdf1st.mydemo.Base.Presenter.IPresenter;

@@ -1,7 +1,7 @@
 package com.asdf1st.mydemo.Video.JiaoZi;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;

@@ -1,17 +1,10 @@
 package com.asdf1st.mydemo.Mqtt;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.asdf1st.mydemo.Base.Presenter.IPresenter;
 import com.asdf1st.mydemo.R;
-
-import butterknife.BindView;
 
 public class MyMqttActivity extends BaseMqttActivity {
     @Override
