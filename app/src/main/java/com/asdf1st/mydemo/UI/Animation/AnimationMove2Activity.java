@@ -3,14 +3,14 @@ package com.asdf1st.mydemo.UI.Animation;
 import android.animation.Animator;
 import android.view.View;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
-import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.View.Activity.BaseMVPActivity;
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.XiaoYuAnimationUtils;
 
 import butterknife.BindView;
 
-public class AnimationMove2Activity extends BaseActivity {
+public class AnimationMove2Activity extends BaseMVPActivity {
     @BindView(R.id.view_tar)
     View view_tar;
     @BindView(R.id.view_src0)

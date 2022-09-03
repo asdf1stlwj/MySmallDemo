@@ -1,4 +1,4 @@
-package com.asdf1st.mydemo.Base.Model;
+package com.asdf1st.mydemo.Base.MVP.Model;
 
 
 import java.util.Map;

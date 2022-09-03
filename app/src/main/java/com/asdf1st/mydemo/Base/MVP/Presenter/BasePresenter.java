@@ -1,9 +1,9 @@
-package com.asdf1st.mydemo.Base.Presenter;
+package com.asdf1st.mydemo.Base.MVP.Presenter;
 
 
 
-import com.asdf1st.mydemo.Base.Model.INetMdoule;
-import com.asdf1st.mydemo.Base.View.IView;
+import com.asdf1st.mydemo.Base.MVP.Model.INetMdoule;
+import com.asdf1st.mydemo.Base.MVP.View.IView;
 
 import java.lang.ref.WeakReference;
 

@@ -1,9 +1,9 @@
-package com.asdf1st.mydemo.Base.View;
+package com.asdf1st.mydemo.Base.MVP.View;
 
 
 import android.content.Context;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
 
 public interface IView<T extends IPresenter> {
     T createPresenter();

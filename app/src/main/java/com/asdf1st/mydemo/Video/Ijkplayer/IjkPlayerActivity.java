@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
-import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.View.Activity.BaseMVPActivity;
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.FileUtils;
 
@@ -14,7 +14,7 @@ import butterknife.BindView;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
-public class IjkPlayerActivity extends BaseActivity {
+public class IjkPlayerActivity extends BaseMVPActivity {
     @BindView(R.id.videoView)
     VideoPlayerIJK videoView;
     String path;

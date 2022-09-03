@@ -1,5 +1,5 @@
-package com.asdf1st.mydemo.Base.Presenter;
-import com.asdf1st.mydemo.Base.View.IView;
+package com.asdf1st.mydemo.Base.MVP.Presenter;
+import com.asdf1st.mydemo.Base.MVP.View.IView;
 public interface IPresenter<T extends IView> {
     void attachView(T t);
 

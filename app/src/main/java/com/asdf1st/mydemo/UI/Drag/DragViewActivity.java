@@ -4,18 +4,17 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
-import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.View.Activity.BaseMVPActivity;
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.NoScrollGridView;
 
 import java.util.ArrayList;
 
-public class DragViewActivity extends BaseActivity {
+public class DragViewActivity extends BaseMVPActivity {
     private NoScrollGridView gv1;
     private NoScrollGridView gv2;
     private NoScrollGridView gv3;

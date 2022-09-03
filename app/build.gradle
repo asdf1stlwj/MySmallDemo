@@ -17,6 +17,11 @@ android {
         }
     }
 
+    dataBinding{
+        enabled=true
+    }
+
+
     compileOptions {
         //使用JAVA8解析  invokedynamic requires --min-sdk-version >= 26
         sourceCompatibility 1.8
@@ -47,6 +52,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //support库要和上面编译android版本对应 例如上面buildtoolVersion27这里也要27.x.x
+    //AndroidX下上面内容已不适用
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

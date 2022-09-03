@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
-import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.View.Activity.BaseMVPActivity;
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.Utils.Data;
 import com.asdf1st.mydemo.Utils.XiaoYuAnimationUtils;
@@ -16,7 +16,7 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class AnimationMoveActivity extends BaseActivity implements AnimationMoveAdapter.OnPlayAnimationListener {
+public class AnimationMoveActivity extends BaseMVPActivity implements AnimationMoveAdapter.OnPlayAnimationListener {
     private String TAG=AnimationMoveActivity.class.getSimpleName();
     @BindView(R.id.view_tar)
     View view_tar;

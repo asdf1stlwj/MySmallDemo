@@ -4,11 +4,9 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import androidx.core.app.NotificationCompat;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
-import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.View.Activity.BaseMVPActivity;
 import com.google.gson.Gson;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
@@ -30,7 +28,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public abstract class BaseMqttActivity extends BaseActivity {
+public abstract class BaseMqttActivity extends BaseMVPActivity {
     public static final int TYPE_DMS_AIRQUALITY =1;//空气仪配网
     public static final int TYPE_DETAIL_AIRQUALITY =2;//空气仪详情
     public static final int TYPE_DMS_FRESHAIR =3;//新风机配网

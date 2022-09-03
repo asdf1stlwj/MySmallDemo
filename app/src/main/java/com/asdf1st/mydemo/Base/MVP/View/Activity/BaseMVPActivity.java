@@ -1,4 +1,4 @@
-package com.asdf1st.mydemo.Base.View.Activity;
+package com.asdf1st.mydemo.Base.MVP.View.Activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,8 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
-import com.asdf1st.mydemo.Base.View.IView;
+import com.asdf1st.mydemo.Base.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.View.IView;
 import com.asdf1st.mydemo.R;
 
 
@@ -25,8 +26,8 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 
-public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivity implements IView {
-    private String TAG = "BaseActivity";
+public abstract class BaseMVPActivity<T extends IPresenter> extends BaseActivity implements IView {
+    private String TAG = "BaseMVPActivity";
     @Nullable
     @BindView(R.id.tv_middle)
     public TextView tv_middle;
@@ -49,23 +50,11 @@ public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivi
 
 
     private boolean isExit = false;
-    protected Handler handler;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-        beforeInit();
-        setContentView(getLayoutId());
-        initClass();
-        initView();
-        afterInit();
-    }
-
     protected void initClass() {
-
-
+        super.initClass();
         unbinder = ButterKnife.bind(this);
-        EventBus.getDefault().register(this);
         mPresenter = (T) createPresenter();
         if (mPresenter != null) {
             mPresenter.attachView(this);
@@ -81,7 +70,6 @@ public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivi
         if (mPresenter != null)
             mPresenter.dettachView();
         unbinder.unbind();
-        EventBus.getDefault().unregister(this);
     }
 
     @Override
@@ -91,17 +79,16 @@ public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivi
 
     @Override
     public void dismissWaittingDialog() {
-        //mUiHelper.dismissDialog(this);
+
     }
 
     @Override
     public void showWaittingDialog() {
-        //mUiHelper.showWaittingDialog(this);
+
     }
 
     @Override
     public void showMessage(String message) {
-        //mUiHelper.showToast(this, message);
     }
 
     @Override
@@ -126,7 +113,7 @@ public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivi
             ll_left.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    BaseActivity.this.onBackPressed();
+                    BaseMVPActivity.this.onBackPressed();
                 }
             });
         }

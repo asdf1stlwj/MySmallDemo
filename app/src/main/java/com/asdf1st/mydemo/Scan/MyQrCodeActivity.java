@@ -1,19 +1,19 @@
 package com.asdf1st.mydemo.Scan;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.KeyEvent;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
-import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.View.Activity.BaseMVPActivity;
 import com.asdf1st.mydemo.R;
 import com.journeyapps.barcodescanner.CaptureManager;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 import butterknife.BindView;
 
-public class MyQrCodeActivity extends BaseActivity {
+public class MyQrCodeActivity extends BaseMVPActivity {
     @BindView(R.id.dbv_custom)
     public DecoratedBarcodeView barcodeScannerView;
     private CaptureManager capture;

@@ -1,9 +1,6 @@
 package com.asdf1st.mydemo.Mqtt;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
 import com.asdf1st.mydemo.R;
 
 public class MyMqttActivity extends BaseMqttActivity {

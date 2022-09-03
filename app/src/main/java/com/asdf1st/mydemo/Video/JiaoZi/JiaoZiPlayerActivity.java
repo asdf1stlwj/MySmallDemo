@@ -1,20 +1,18 @@
 package com.asdf1st.mydemo.Video.JiaoZi;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
-import com.asdf1st.mydemo.Base.Presenter.IPresenter;
-import com.asdf1st.mydemo.Base.View.Activity.BaseActivity;
+import com.asdf1st.mydemo.Base.MVP.Presenter.IPresenter;
+import com.asdf1st.mydemo.Base.MVP.View.Activity.BaseMVPActivity;
 import com.asdf1st.mydemo.R;
 
 import butterknife.BindView;
 import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
 
-public class JiaoZiPlayerActivity extends BaseActivity {
+public class JiaoZiPlayerActivity extends BaseMVPActivity {
     @BindView(R.id.videoView)
     JzvdStd videoView;
     private String name,url;
