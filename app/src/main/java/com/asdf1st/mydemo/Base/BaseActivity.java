@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.greenrobot.eventbus.EventBus;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     protected Handler handler;
 
     @Override
@@ -25,9 +25,7 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-    protected int getLayoutId() {
-        return 0;
-    }
+    protected abstract int getLayoutId();
 
     protected void initClass() {
         EventBus.getDefault().register(this);

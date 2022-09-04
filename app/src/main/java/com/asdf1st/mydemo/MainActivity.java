@@ -82,6 +82,7 @@ public class MainActivity extends Activity {
 //        dataList.add(new ActItem(RefreshLayoutActivity.class,"NestScroll下拉加载"));
 
 
+
         adapter.notifyDataSetChanged();
     }
 

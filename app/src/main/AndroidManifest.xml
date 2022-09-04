@@ -26,6 +26,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:replace="android:icon, android:label,android:theme">
+        <activity
+            android:name=".Test.MvvmActivity"
+            android:exported="false" />
         <activity android:name=".memoryControl.MemoryLeakActivity" />
         <activity android:name=".memoryControl.MemoryShadeActivity" />
         <activity
@@ -83,7 +86,7 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".Scan.MyQrCodeActivity" />
         <activity android:name=".UI.Animation.AnimationMoveActivity" />
-        <activity android:name=".UI.Animation.AnimationMove2Activity"></activity>
+        <activity android:name=".UI.Animation.AnimationMove2Activity" />
     </application>
 
 </manifest>
