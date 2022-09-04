@@ -27,7 +27,7 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:replace="android:icon, android:label,android:theme">
         <activity
-            android:name=".Test.MvvmActivity"
+            android:name=".architecture.MvvmActivity"
             android:exported="false" />
         <activity android:name=".memoryControl.MemoryLeakActivity" />
         <activity android:name=".memoryControl.MemoryShadeActivity" />

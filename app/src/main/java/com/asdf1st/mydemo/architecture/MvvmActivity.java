@@ -1,10 +1,11 @@
-package com.asdf1st.mydemo.Test;
+package com.asdf1st.mydemo.architecture;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.asdf1st.mydemo.R;
 import com.asdf1st.mydemo.databinding.ActivityMvvmBinding;
@@ -23,7 +24,7 @@ public class MvvmActivity extends AppCompatActivity {
     }
 
     public class UserHandler{
-        public void changeUserName(){
+        public void changeUserName(View view){
             Log.i("UserHandler", "changeUserName: ");
         }
     }

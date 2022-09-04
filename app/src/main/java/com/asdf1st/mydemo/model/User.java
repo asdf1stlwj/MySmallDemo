@@ -2,7 +2,6 @@ package com.asdf1st.mydemo.model;
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
-
 public class User extends BaseObservable {
     @Bindable
     public String name;
